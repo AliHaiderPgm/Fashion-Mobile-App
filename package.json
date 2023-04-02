@@ -1,5 +1,5 @@
 {
-  "name": "ecom",
+  "name": "universe",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -9,10 +9,17 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.5.7",
+    "@react-navigation/drawer": "^6.6.2",
+    "@react-navigation/native": "^6.1.6",
+    "@react-navigation/native-stack": "^6.9.12",
     "expo": "~48.0.9",
+    "expo-splash-screen": "~0.18.1",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
-    "react-native": "0.71.4"
+    "react-native": "0.71.4",
+    "react-native-gesture-handler": "~2.9.0",
+    "react-native-reanimated": "~2.14.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

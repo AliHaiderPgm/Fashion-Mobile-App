@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "ecom",
-    "slug": "ecom",
+    "name": "Universe",
+    "slug": "Universe",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splashScreen.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#111111"
     },
     "assetBundlePatterns": [
       "**/*"
