@@ -1,11 +1,13 @@
 import { View, Image, StyleSheet, Pressable } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 export default function Navbar() {
+    const insets = useSafeAreaInsets()
     const navigation = useNavigation()
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, {marginTop:insets.top }]}>
             {/* Hamburger */}
             <Pressable>
                 <Image
@@ -40,9 +42,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginTop: 42,
         marginBottom: 12,
-        marginHorizontal: 18
+        paddingHorizontal: 25,
+        paddingTop: 10,
     },
     image: {
         height: 23,

@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 const {width} = Dimensions.get('window')
 const height = width * 0.68
-export default function Carousel(props) {
+export default function ImageCarousel(props) {
     const data = props.data;
     const [isActive, setIsActive] = useState(0)
     const change = ({nativeEvent})=>{
