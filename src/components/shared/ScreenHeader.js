@@ -26,12 +26,12 @@ const styles = StyleSheet.create({
     },
     shape:{
       position: 'absolute',
-      bottom: -13,
+      bottom: -12,
       left: '39%',
       zIndex: -1,
       height: 35,
       width: 35,
       resizeMode: 'contain',
-      transform: [{rotate: '25deg'}]
+      transform: [{rotate: '10deg'}]
     },
 })

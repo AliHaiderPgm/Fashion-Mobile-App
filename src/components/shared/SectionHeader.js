@@ -6,7 +6,9 @@ export default function SectionHeader({title,onPress, buttonTitle,}) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
-      <Button title={buttonTitle} color={colors.black} />
+      {
+        buttonTitle && <Button title={buttonTitle} color={colors.black} />
+      }
     </View>
   )
 }

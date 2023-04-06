@@ -1,38 +1,37 @@
+import React from 'react'  
 import { View, Image, StyleSheet, Pressable } from 'react-native'
-import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import Icon from './Icon'
 
 export default function Navbar() {
     const insets = useSafeAreaInsets()
     const navigation = useNavigation()
     return (
-        <View style={[styles.container, {marginTop:insets.top }]}>
+        <View style={[styles.container, { marginTop: insets.top }]}>
             {/* Hamburger */}
-            <Pressable>
-                <Image
+                <Icon
                     style={styles.image}
-                    source={require('../../../assets/menu.png')}
+                    icon="menu"
                 />
-            </Pressable>
 
             {/* Logo */}
             <View>
-                <Image source={require('../../../assets/universe-black.png')} style={styles.logo}/>
+                <Image source={require('../../../assets/universe-black.png')} style={styles.logo} />
             </View>
 
             <View style={styles.searchAndCart}>
                 {/* SearchBar */}
-                <Pressable onPress={() => navigation.navigate('searchBar')}>
-                    <Image source={require('../../../assets/search.png')} style={styles.image} />
-                </Pressable>
+                <Icon
+                    onPress={() => navigation.navigate('searchBar')}
+                    icon="search"
+                    style={styles.image}
+                />
                 {/* Cart */}
-                <Pressable>
-                    <Image
-                        style={styles.image}
-                        source={require('../../../assets/shopping-cart.png')}
-                    />
-                </Pressable>
+                <Icon
+                icon="cart"
+                style={styles.image}
+                />
             </View>
         </View>
     )
@@ -51,14 +50,14 @@ const styles = StyleSheet.create({
         width: 23,
         resizeMode: 'contain'
     },
-    logo:{
-        height:30,
-        width:100,
-        resizeMode:'contain',
-        marginLeft:30
+    logo: {
+        height: 30,
+        width: 100,
+        resizeMode: 'contain',
+        marginLeft: 30
     },
-    searchAndCart:{
-        flexDirection:'row',
-        gap:10
+    searchAndCart: {
+        flexDirection: 'row',
+        gap: 10
     },
 })
