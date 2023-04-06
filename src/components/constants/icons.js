@@ -5,6 +5,7 @@ import profile from '../../../assets/icons/profile.png';
 import menu from '../../../assets/icons/menu.png';
 import search from '../../../assets/icons/search.png';
 import cart from '../../../assets/icons/cart.png';
+import rightArrow from '../../../assets/icons/right-arrow.png';
 import adidas from '../../../assets/icons/adidas.png';
 import fendi from '../../../assets/icons/fendi.png';
 import nike from '../../../assets/icons/nike.png';
@@ -22,4 +23,5 @@ export default{
     fendi,
     nike,
     zara,
+    rightArrow,
 }

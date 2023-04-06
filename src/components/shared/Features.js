@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: spacing.l,
         paddingVertical: spacing.m,
         backgroundColor: colors.white,
-        marginTop: -10,
     },
     icon: {
         resizeMode: 'contain',
