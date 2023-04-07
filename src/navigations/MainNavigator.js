@@ -10,17 +10,17 @@ export default function index() {
 
     return (
         <NavigationContainer>
-            <SplashScreenProvider/>
+            <SplashScreenProvider />
             <Stack.Navigator>
-                <Stack.Screen 
-                name='Root' 
-                component={TabNavigator} 
-                options={{headerShown: false}} />
+                <Stack.Screen
+                    name='Root'
+                    component={TabNavigator}
+                    options={{ headerShown: false }} />
 
-                <Stack.Screen 
-                name='searchBar' 
-                component={SearchBar} 
-                options={{ headerShown: false }} />
+                <Stack.Screen
+                    name='searchBar'
+                    component={SearchBar}
+                    options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

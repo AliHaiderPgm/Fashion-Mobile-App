@@ -8,7 +8,7 @@ const SearchBar = () => {
     return (
         <View style={styles.mainContainer}>
             <Pressable onPress={()=>navigation.goBack()}>
-            <Image source={require('../../../assets/left-arrow.png')} style={styles.navigation} />
+            <Image source={require('../../../assets/icons/left-arrow.png')} style={styles.navigation} />
             </Pressable>
             <View style={styles.searchContainer}>
                 <View>

@@ -1,37 +1,29 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 import { sizes, spacing } from '../constants/theme'
+import Icon from './Icon'
+import { useNavigation } from '@react-navigation/native'
 
-export default function ScreenHeader({mainHeading,secondTitle}) {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.mainTitle}>{mainHeading}</Text>
-      <Text style={styles.secondTitle}>{secondTitle}</Text>
-      <Image source={require('../../../assets/icons/arc.png')} style={styles.shape}/>
-    </View>
-  )
+export default function ScreenHeader({ title }) {
+    const navigation = useNavigation()
+    return (
+        <View style={styles.container}>
+            <Icon icon="leftArrow" onPress={() => navigation.goBack()} />
+            <Text style={styles.heading}>{title}</Text>
+            <Icon icon="search" size={24} onPress={()=> navigation.navigate('searchBar')}/>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
-    container:{
-        paddingHorizontal:spacing.l,
-        paddingVertical:spacing.s,
+    container: {
+        marginTop: spacing.l,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: spacing.m,
     },
-    mainTitle:{
-        fontSize:sizes.title,
-        fontWeight:'bold',
-      },
-      secondTitle:{
-        fontSize: sizes.title,
-    },
-    shape:{
-      position: 'absolute',
-      bottom: -12,
-      left: '39%',
-      zIndex: -1,
-      height: 35,
-      width: 35,
-      resizeMode: 'contain',
-      transform: [{rotate: '10deg'}]
-    },
+    heading: {
+        fontSize: sizes.h2,
+    }
 })

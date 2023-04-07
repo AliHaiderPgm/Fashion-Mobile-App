@@ -483,3 +483,22 @@ export const WOMENS_FEATURED_PRODUCTS = [
   description: "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus ",
   rating: 4
 }]
+
+export const CATEGORIES = [
+  {
+    title: "Men",
+    image: require('../../assets/male_model_category.jpg')
+  },
+  {
+    title: "Child",
+    image: require('../../assets/child_model_category.jpg')
+  },
+  {
+    title: "Women",
+    image: require('../../assets/female_model_category.jpg')
+  },
+  {
+    title: "Brands",
+    icon: "star"
+  }
+]
