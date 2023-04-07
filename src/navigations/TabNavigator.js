@@ -8,7 +8,8 @@ import Icon from '../components/shared/Icon';
 export default function TabNavigator() {
   const Tab = createBottomTabNavigator();
   return (
-    <Tab.Navigator initialRouteName='Home' screenOptions={{
+    <Tab.Navigator initialRouteName='Home' 
+    screenOptions={{
       headerShown: false,
       tabBarShowLabel: false
     }}>
