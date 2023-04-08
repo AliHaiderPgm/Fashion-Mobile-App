@@ -14,18 +14,18 @@ export default function TabNavigator() {
       tabBarShowLabel: false
     }}>
       <Tab.Screen name="Home" component={Home} options={{
-        tabBarIcon: () => {
-          return <Icon icon="home" />
+        tabBarIcon: ({focused}) => {
+          return focused ? <Icon icon="homeFilled"/> : <Icon icon="home" />
         }
       }} />
       <Tab.Screen name="Categories" component={Categories} options={{
-        tabBarIcon: () => {
-          return <Icon icon="categories" />
+        tabBarIcon: ({focused}) => {
+          return focused ? <Icon icon="categoriesFilled"/> :<Icon icon="categories" />
         }
       }} />
       <Tab.Screen name="Profile" component={Profile} options={{
-        tabBarIcon: () => {
-          return <Icon icon="profile" />
+        tabBarIcon: ({focused}) => {
+          return focused ? <Icon icon="profileFilled"/>: <Icon icon="profile" />
         }
       }} />
     </Tab.Navigator>
