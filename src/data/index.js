@@ -1,17 +1,17 @@
-// const USERS = {
-//     1: {
-//       id: 1,
-//       username: 'Alexia Jane',
-//       avatar: require('../../assets/images/users/32.jpeg'),
-//     },
-//     2: {
-//       id: 2,
-//       username: 'Jacky Depp',
-//       avatar: require('../../assets/images/users/35.jpeg'),
-//     },
-//   };
-
 import icons from '../components/constants/icons';
+export const USERS = {
+    1: {
+      id: 1,
+      username: 'Alexia Jane',
+      avatar: require('../../assets/icons/user.png'),
+    },
+    2: {
+      id: 2,
+      username: 'Jacky Depp',
+      avatar: require('../../assets/icons/user.png'),
+    },
+  };
+
 
 //   const REVIEWS = {
 //     1: {
@@ -500,5 +500,32 @@ export const CATEGORIES = [
   {
     title: "Brands",
     icon: "star"
-  }
+  },
+]
+
+export const SETTING_OPTIONS = [
+  {
+    icon: "bell",
+    title: "Notification"
+  },
+  {
+    icon: "shoppingBag",
+    title: "My Orders"
+  },
+  {
+    icon: "navigation",
+    title: "Addresses"
+  },
+  {
+    icon: "creditCard",
+    title: "Payment"
+  },
+  {
+    icon: "heart",
+    title: "Whislist"
+  },
+  {
+    icon: "setting",
+    title: "Settings"
+  },
 ]

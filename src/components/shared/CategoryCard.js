@@ -2,6 +2,8 @@ import { View, Text, Pressable, Image, StyleSheet } from 'react-native'
 import React from 'react'
 import Icon from './Icon'
 import { colors, sizes, spacing } from '../constants/theme'
+import Options from '../shared/Options'
+import OptionCard from './OptionCard'
 
 export default function CategoryCard({ list }) {
     return (
@@ -24,13 +26,7 @@ export default function CategoryCard({ list }) {
                                         </View>
                                     </View>
                                     :
-                                    <View style={styles.cardWrapper}>
-                                        <View style={styles.textWrapper}>
-                                            <Text style={styles.title}>{Category.title}</Text>
-                                            <Icon icon={Category?.icon} size={25}/>
-                                        </View>
-                                        <Icon icon="next" size={25}/>
-                                    </View>
+                                    <OptionCard data={Category}/>
                             }
                         </View>
                     </Pressable>
@@ -51,6 +47,7 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
         width: '100%',
         elevation: 7,
+        backgroundColor: colors.white,
     },
     image: {
         height: '100%',
