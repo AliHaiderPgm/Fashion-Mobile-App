@@ -1,8 +1,9 @@
-import React from 'react'  
+import React from 'react'
 import { View, Image, StyleSheet, Pressable } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import Icon from './Icon'
+import { spacing } from '../constants/theme'
 
 export default function Navbar() {
     const insets = useSafeAreaInsets()
@@ -10,10 +11,10 @@ export default function Navbar() {
     return (
         <View style={[styles.container, { marginTop: insets.top }]}>
             {/* Hamburger */}
-                <Icon
-                    style={styles.image}
-                    icon="menu"
-                />
+            <Icon
+                icon="menu"
+                size={25}
+            />
 
             {/* Logo */}
             <View>
@@ -26,11 +27,13 @@ export default function Navbar() {
                     onPress={() => navigation.navigate('searchBar')}
                     icon="search"
                     style={styles.image}
+                    size={25}
                 />
                 {/* Cart */}
                 <Icon
-                icon="cart"
-                style={styles.image}
+                    icon="cart"
+                    size={25}
+                    onPress={() => navigation.navigate('cart')}
                 />
             </View>
         </View>
@@ -45,19 +48,14 @@ const styles = StyleSheet.create({
         paddingHorizontal: 25,
         paddingTop: 10,
     },
-    image: {
-        height: 23,
-        width: 23,
-        resizeMode: 'contain'
-    },
     logo: {
-        height: 30,
+        height: 32,
         width: 100,
         resizeMode: 'contain',
         marginLeft: 30
     },
     searchAndCart: {
         flexDirection: 'row',
-        gap: 10
+        gap: 12
     },
 })

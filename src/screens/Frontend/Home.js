@@ -30,7 +30,7 @@ export default Home = () => {
                 />
                 <Features icons={brands} size={60} />
 
-                <SectionHeader
+                {/* <SectionHeader
                     title="For Men"
                 />
                 <ProductsCarousel list={MENS_FEATURED_PRODUCTS} inProductCard={true} />
@@ -43,7 +43,7 @@ export default Home = () => {
                 <SectionHeader 
                 title= "For Women"
                 />
-                <ProductsCarousel list={WOMENS_FEATURED_PRODUCTS} inProductCard={true}/>
+                <ProductsCarousel list={WOMENS_FEATURED_PRODUCTS} inProductCard={true}/> */}
             </ScrollView>
         </View>
     )
