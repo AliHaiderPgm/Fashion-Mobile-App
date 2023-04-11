@@ -33,7 +33,7 @@ export const shadow = {
       width: 0,
       height: 2,
     },
-    elevation: 5
+    elevation: 7
   },
 
 };
@@ -47,6 +47,7 @@ export const sizes = {
   body: 14,
   caption: 12,
   radius: 16,
+  cardHeight: 140
 };
 
 export const spacing = {

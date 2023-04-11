@@ -22,6 +22,7 @@ import navigation from '../../../assets/icons/gps-navigation.png';
 import heart from '../../../assets/icons/heart.png';
 import setting from '../../../assets/icons/setting.png';
 import shoppingBag from '../../../assets/icons/shopping-bag.png';
+import close from '../../../assets/icons/close.png'
 
 export default {
     home,homeFilled,
@@ -39,5 +40,6 @@ export default {
     leftArrow,
     star,
     next,
-    bell, creditCard, navigation, heart, setting, shoppingBag
+    bell, creditCard, navigation, heart, setting, shoppingBag,
+    close,
 }

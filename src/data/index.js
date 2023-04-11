@@ -220,6 +220,7 @@ export const PRODUCTS = [
     //   reviews: [REVIEWS[1], REVIEWS[2]],
     //   hotels: [HOTELS[1], HOTELS[2]],
     type: 'PRODUCT',
+    quantity: 1,
   },
   {
     id: 2,
@@ -233,6 +234,7 @@ export const PRODUCTS = [
     //   reviews: [REVIEWS[2], REVIEWS[1]],
     //   hotels: [HOTELS[3], HOTELS[4]],
     type: 'PRODUCT',
+    quantity: 1,
   },
   {
     id: 3,
@@ -246,6 +248,7 @@ export const PRODUCTS = [
     //   reviews: [REVIEWS[1], REVIEWS[2]],
     //   hotels: [HOTELS[5], HOTELS[6]],
     type: 'PRODUCT',
+    quantity: 1,
   },
   {
     id: 7,
@@ -259,6 +262,7 @@ export const PRODUCTS = [
     //   reviews: [REVIEWS[2], REVIEWS[1]],
     //   hotels: [HOTELS[7], HOTELS[8]],
     type: 'PRODUCT',
+    quantity: 1,
   },
 ];
 
@@ -324,49 +328,49 @@ export const MENS_FEATURED_PRODUCTS = [
   description: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, ",
   rating: 2
 }, 
-// {
-//   id: 4,
-//   image: require('../../assets/men_featured/men_featured_product_4.jpg'),
-//   title: "lbricksey3",
-//   price: 832,
-//   description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, ",
-//   rating: 2
-// }, {
-//   id: 5,
-//   image: require('../../assets/men_featured/men_featured_product_5.jpg'),
-//   title: "ckepe4",
-//   price: 1321,
-//   description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non,",
-//   rating: 5
-// }, {
-//   id: 6,
-//   image: require('../../assets/men_featured/men_featured_product_6.jpg'),
-//   title: "mscallan5",
-//   price: 324,
-//   description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit ",
-//   rating: 2
-// }, {
-//   id: 7,
-//   image: require('../../assets/men_featured/men_featured_product_7.jpg'),
-//   title: "mhaggith6",
-//   price: 809,
-//   description: "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam ",
-//   rating: 3
-// }, {
-//   id: 8,
-//   image: require('../../assets/men_featured/men_featured_product_8.jpg'),
-//   title: "mfozzard7",
-//   price: 278,
-//   description: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, ",
-//   rating: 2
-// }, {
-//   id: 9,
-//   image: require('../../assets/men_featured/men_featured_product_9.jpg'),
-//   title: "dbras8",
-//   price: 375,
-//   description: "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus ",
-//   rating: 4
-// }
+{
+  id: 4,
+  image: require('../../assets/men_featured/men_featured_product_4.jpg'),
+  title: "lbricksey3",
+  price: 832,
+  description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, ",
+  rating: 2
+}, {
+  id: 5,
+  image: require('../../assets/men_featured/men_featured_product_5.jpg'),
+  title: "ckepe4",
+  price: 1321,
+  description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non,",
+  rating: 5
+}, {
+  id: 6,
+  image: require('../../assets/men_featured/men_featured_product_6.jpg'),
+  title: "mscallan5",
+  price: 324,
+  description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit ",
+  rating: 2
+}, {
+  id: 7,
+  image: require('../../assets/men_featured/men_featured_product_7.jpg'),
+  title: "mhaggith6",
+  price: 809,
+  description: "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam ",
+  rating: 3
+}, {
+  id: 8,
+  image: require('../../assets/men_featured/men_featured_product_8.jpg'),
+  title: "mfozzard7",
+  price: 278,
+  description: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, ",
+  rating: 2
+}, {
+  id: 9,
+  image: require('../../assets/men_featured/men_featured_product_9.jpg'),
+  title: "dbras8",
+  price: 375,
+  description: "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus ",
+  rating: 4
+}
 ]
 export const CHILD_FEATURED_PRODUCTS = [
   {
@@ -430,64 +434,64 @@ export const WOMENS_FEATURED_PRODUCTS = [
   description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut.",
   rating: 5
 }, 
-// {
-//   id: 2,
-//   image: require('../../assets/women_featured/women_featured_product_2.jpg'),
-//   title: "khaffenden1",
-//   price: 1118,
-//   description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut,",
-//   rating: 3
-// }, {
-//   id: 3,
-//   image: require('../../assets/women_featured/women_featured_product_3.jpg'),
-//   title: "mgoskar2",
-//   price: 1048,
-//   description: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, ",
-//   rating: 2
-// }, {
-//   id: 4,
-//   image: require('../../assets/women_featured/women_featured_product_4.jpg'),
-//   title: "lbricksey3",
-//   price: 832,
-//   description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, ",
-//   rating: 2
-// }, 
-// {
-//   id: 5,
-//   image: require('../../assets/women_featured/women_featured_product_5.jpg'),
-//   title: "ckepe4",
-//   price: 1321,
-//   description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non,",
-//   rating: 5
-// }, {
-//   id: 6,
-//   image: require('../../assets/women_featured/women_featured_product_6.jpg'),
-//   title: "mscallan5",
-//   price: 324,
-//   description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit ",
-//   rating: 2
-// }, {
-//   id: 7,
-//   image: require('../../assets/women_featured/women_featured_product_7.jpg'),
-//   title: "mhaggith6",
-//   price: 809,
-//   description: "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam ",
-//   rating: 3
-// }, {
-//   id: 8,
-//   image: require('../../assets/women_featured/women_featured_product_8.jpg'),
-//   title: "mfozzard7",
-//   price: 278,
-//   description: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, ",
-//   rating: 2
-// }, {
-//   id: 9,
-//   image: require('../../assets/women_featured/women_featured_product_9.jpg'),
-//   title: "dbras8",
-//   price: 375,
-//   description: "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus ",
-//   rating: 4
-// }
+{
+  id: 2,
+  image: require('../../assets/women_featured/women_featured_product_2.jpg'),
+  title: "khaffenden1",
+  price: 1118,
+  description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut,",
+  rating: 3
+}, {
+  id: 3,
+  image: require('../../assets/women_featured/women_featured_product_3.jpg'),
+  title: "mgoskar2",
+  price: 1048,
+  description: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, ",
+  rating: 2
+}, {
+  id: 4,
+  image: require('../../assets/women_featured/women_featured_product_4.jpg'),
+  title: "lbricksey3",
+  price: 832,
+  description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, ",
+  rating: 2
+}, 
+{
+  id: 5,
+  image: require('../../assets/women_featured/women_featured_product_5.jpg'),
+  title: "ckepe4",
+  price: 1321,
+  description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non,",
+  rating: 5
+}, {
+  id: 6,
+  image: require('../../assets/women_featured/women_featured_product_6.jpg'),
+  title: "mscallan5",
+  price: 324,
+  description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit ",
+  rating: 2
+}, {
+  id: 7,
+  image: require('../../assets/women_featured/women_featured_product_7.jpg'),
+  title: "mhaggith6",
+  price: 809,
+  description: "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam ",
+  rating: 3
+}, {
+  id: 8,
+  image: require('../../assets/women_featured/women_featured_product_8.jpg'),
+  title: "mfozzard7",
+  price: 278,
+  description: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, ",
+  rating: 2
+}, {
+  id: 9,
+  image: require('../../assets/women_featured/women_featured_product_9.jpg'),
+  title: "dbras8",
+  price: 375,
+  description: "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus ",
+  rating: 4
+}
 ]
 
 export const CATEGORIES = [

@@ -11,7 +11,7 @@ export default function CategoryCard({ list }) {
             {list.map((Category, index) => {
                 return (
                     <Pressable key={index}>
-                        <View style={[{ height: Category.image ? 140 : 70 }, styles.container]}>
+                        <View style={[{ height: Category.image ? sizes.cardHeight : sizes.cardHeight / 2 }, styles.container]}>
                             {
                                 Category.image ?
                                     <View>

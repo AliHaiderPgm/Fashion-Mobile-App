@@ -1,4 +1,4 @@
-import { Image, Pressable, TouchableHighlight } from 'react-native'
+import { Image, Pressable, TouchableHighlight, TouchableOpacity } from 'react-native'
 import React from 'react'
 import icons from '../constants/icons'
 
@@ -10,7 +10,7 @@ export default function Icon({ onPress, icon, style, size = 32 }) {
         />
     )
     if (onPress) {
-        return <Pressable onPress={onPress}>{image}</Pressable>
+        return <TouchableOpacity onPress={onPress} activeOpacity={0.5} style={{padding: 4}}>{image}</TouchableOpacity>
     }
     return image;
 }
