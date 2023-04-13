@@ -3,32 +3,32 @@ import React from 'react'
 import Icon from './Icon'
 import { colors, shadow, sizes, spacing } from '../constants/theme'
 
-export default function CartCard({ list, increment, decrement }) {
+export default function CartCard({ item, increment, decrement, remove }) {
     return (
-        <View style={[shadow.dark, styles.cardWrapper]} key={list.id}>
+        <View style={[shadow.dark, styles.cardWrapper]} key={item.id}>
 
             <View style={styles.quantityContainer}>
-                <TouchableOpacity style={styles.btn} onPress={() => increment(list.id)}>
+                <TouchableOpacity style={styles.btn} onPress={() => increment(item.id)}>
                     <Text style={styles.text}>+</Text>
                 </TouchableOpacity>
 
-                <Text style={styles.text}>{list.quantity}</Text>
+                <Text style={styles.text}>{item.quantity}</Text>
                 
-                <TouchableOpacity style={styles.btn} onPress={() => decrement(list.id)}>
+                <TouchableOpacity style={styles.btn} onPress={() => decrement(item.id)}>
                     <Text style={styles.text}>-</Text>
                 </TouchableOpacity>
             </View>
 
             <View style={styles.imageContainer}>
-                <Image source={list.image} style={styles.image} />
+                <Image source={item.image} style={styles.image} />
             </View>
 
             <View style={styles.detailsContainer}>
-                <Text style={styles.title}>{list.title}</Text>
-                <Text style={styles.price}>${list.price}</Text>
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={styles.price}>${item.price}</Text>
             </View>
 
-            <TouchableOpacity style={styles.deleteButtonContainer}>
+            <TouchableOpacity style={styles.deleteButtonContainer} onPress={()=> remove(item.id)}>
                 <Icon icon="close" size={13} />
             </TouchableOpacity>
         </View>

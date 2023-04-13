@@ -1,11 +1,13 @@
 import React from 'react'
 import { View, Image, StyleSheet, Text, TouchableHighlight } from 'react-native'
 import { colors, shadow, sizes, spacing } from '../constants/theme';
+import { useNavigation } from '@react-navigation/native';
 
 
 const CARD_WIDTH = sizes.width / 2 - (spacing.l + spacing.l / 2);
 const CARD_HEIGHT = 220;
 export default function ProductCard({ cardData, carousel }) {
+    const navigation = useNavigation()
     return (
         <>
             <TouchableHighlight key={cardData.id} style={
@@ -16,7 +18,8 @@ export default function ProductCard({ cardData, carousel }) {
                         marginRight: !carousel ? 0 : spacing.l - 15
                     }
                 ]
-            }>
+            }
+            onPress={()=>navigation.navigate('productDetail',{product: cardData})}>
                 <View style={[styles.card, shadow.light]}>
                     <View style={styles.imageContainer}>
                         <Image source={cardData.image} style={styles.image} />
