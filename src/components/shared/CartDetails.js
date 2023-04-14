@@ -8,7 +8,6 @@ export default function CartDetails({ list }) {
 
     const [cartItems, setCartItems] = useState(list)
     const [cartTotal, setCartTotal] = useState()
-    const [subTotal, setSubTotal] = useState()
 
     const cart_total = () => {
         let sum = 0
@@ -43,7 +42,7 @@ export default function CartDetails({ list }) {
     
     useEffect(() => {
         cart_total()
-    }, [])
+    }, [cartItems])
 
 
 
@@ -52,7 +51,6 @@ export default function CartDetails({ list }) {
         const updatedItem = [...cartItems]
         updatedItem[itemIndex].quantity++
         setCartItems(updatedItem)
-        cart_total()
     }
     
     const handleDecrement = itemId => {
@@ -60,13 +58,11 @@ export default function CartDetails({ list }) {
         const updatedItem = [...cartItems]
         updatedItem[itemIndex].quantity = updatedItem[itemIndex].quantity > 1 ? updatedItem[itemIndex].quantity - 1 : 1
         setCartItems(updatedItem)
-        cart_total()
     }
     
     const handleDelete = (itemId) => {
         const newItems = cartItems.filter(item => item.id !== itemId)
         setCartItems(newItems)
-        cart_total()
     }
 
     return <>
@@ -137,6 +133,5 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: sizes.h2 - 5,
         fontWeight: 600,
-        color: colors.white,
     }
 })

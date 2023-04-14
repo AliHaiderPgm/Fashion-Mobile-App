@@ -3,12 +3,14 @@ import React, { useState } from 'react'
 import { colors, sizes, spacing } from '../../components/constants/theme'
 import ScreenHeader from '../../components/shared/ScreenHeader'
 import Counter from '../../components/shared/Counter'
+import Icon from '../../components/shared/Icon'
 
 export default function ProductDetails({ navgation, route }) {
   const { product } = route.params
 
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
+  const [price, setPrice] = useState(null);
 
   // Function to handle size selection
   const handleSizeSelection = (size) => {
@@ -17,12 +19,15 @@ export default function ProductDetails({ navgation, route }) {
   const handleColorSelection = (color) => {
     setSelectedColor(color);
   };
+  const fromChild = (data) => {
+    setPrice(data)
+  }
 
   const sizes = ['S', 'M', 'L', 'XL',]
   const colors = ['#ef233c', '#2ec4b6', '#a2d2ff', '#6c757d', '#001233']
 
   return (
-    <>
+    <View style={styles.mainContainer}>
       <ScreenHeader icon="heartOutline" navigateTo="Home" style={styles.header} />
       <ScrollView style={styles.container}>
 
@@ -68,23 +73,36 @@ export default function ProductDetails({ navgation, route }) {
           </View>
 
           <Text style={styles.label}>Quantity:</Text>
-          <Counter/>
+          <Counter sendToParent={fromChild} productPrice={product.price} />
+
         </View>
       </ScrollView>
-
-    </>
+      <View style={styles.buttonWrapper}>
+        <TouchableOpacity activeOpacity={0.5} style={styles.button}>
+          <Text style={styles.price}>${price}</Text>
+          <View style={styles.addToCartWrapper}>
+            <Icon icon="cart" size={23} />
+            <Text style={styles.addToCartText}>Add to cart</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    position: 'relative',
+    alignContent:'center',
+    backgroundColor: colors.white
+  },
   header: {
     position: 'absolute',
     width: sizes.width,
     zIndex: 1,
   },
   container: {
-    // position: 'relative',
-    // flex: 1,
+    marginBottom: spacing.xl,
   },
   imageContainer: {
     overflow: 'hidden',
@@ -94,13 +112,14 @@ const styles = StyleSheet.create({
     height: sizes.height - 350,
     resizeMode: 'cover',
   },
-
   detailsWrapper: {
     position: 'relative',
     top: -20,
     backgroundColor: colors.white,
-    borderRadius: sizes.radius + 20,
-    padding: spacing.m,
+    borderTopLeftRadius: sizes.radius + 20,
+    borderTopRightRadius: sizes.radius + 20,
+    paddingHorizontal: spacing.m,
+    paddingVertical: spacing.l,
   },
   titleContainer: {
     marginBottom: spacing.s,
@@ -139,7 +158,6 @@ const styles = StyleSheet.create({
     borderColor: colors.black,
     borderWidth: 1.4,
   },
-
   colorButton: {
     borderRadius: sizes.radius,
     height: 34,
@@ -156,5 +174,37 @@ const styles = StyleSheet.create({
     height: 26,
     width: 26,
     borderRadius: sizes.radius,
-  }
+  },
+  buttonWrapper:{
+    position: 'absolute',
+    bottom: 10,
+    left: 25,
+    width: sizes.width - 50,
+  },
+  button: {
+    backgroundColor: colors.gold,
+    borderRadius: sizes.radius,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    paddingHorizontal: spacing.m,
+    // marginHorizontal: spacing.xl,
+    // marginVertical: spacing.m,
+  },
+  price: {
+    fontSize: sizes.h2,
+    fontWeight: 'bold',
+  },
+  addToCartWrapper: {
+    backgroundColor: colors.white,
+    flexDirection: 'row',
+    marginVertical: spacing.s,
+    padding: spacing.s,
+    borderRadius: sizes.radius,
+    gap: 14,
+  },
+  addToCartText: {
+    fontSize: sizes.h3,
+    fontWeight: '600'
+  },
 })
