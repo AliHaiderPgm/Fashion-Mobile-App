@@ -20,6 +20,7 @@ import bell from '../../../assets/icons/bell.png';
 import creditCard from '../../../assets/icons/credit-card.png';
 import navigation from '../../../assets/icons/gps-navigation.png';
 import heart from '../../../assets/icons/heart.png';
+import heartOutline from '../../../assets/icons/heart-outline.png';
 import setting from '../../../assets/icons/setting.png';
 import shoppingBag from '../../../assets/icons/shopping-bag.png';
 import close from '../../../assets/icons/close.png'
@@ -42,4 +43,5 @@ export default {
     next,
     bell, creditCard, navigation, heart, setting, shoppingBag,
     close,
+    heartOutline,
 }

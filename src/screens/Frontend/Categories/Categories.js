@@ -7,7 +7,7 @@ import { CATEGORIES } from '../../../data'
 export default function Categories() {
   return (
     <View style={styles.container}>
-      <ScreenHeader title="Categories"/>
+      <ScreenHeader title="Categories" icon="search" navigateTo="search"/>
       <CategoryCard list={CATEGORIES}/>
     </View>
   )

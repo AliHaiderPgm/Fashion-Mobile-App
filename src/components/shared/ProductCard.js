@@ -10,7 +10,7 @@ export default function ProductCard({ cardData, carousel }) {
     const navigation = useNavigation()
     return (
         <>
-            <TouchableHighlight key={cardData.id} style={
+            <TouchableHighlight activeOpacity={0.8} underlayColor={'transparent'} key={cardData.id} style={
                 [
                     styles.cardContainer,
                     {

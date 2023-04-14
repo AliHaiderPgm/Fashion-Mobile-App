@@ -4,17 +4,22 @@ import { sizes, spacing } from '../constants/theme'
 import Icon from './Icon'
 import { useNavigation } from '@react-navigation/native'
 
-export default function ScreenHeader({ title, searchIcon = true }) {
+export default function ScreenHeader({ title, icon, navigateTo, style }) {
     const navigation = useNavigation()
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, style]}>
             <Icon icon="leftArrow" onPress={() => navigation.goBack()} />
             <Text style={styles.heading}>{title}</Text>
-            <Icon
-                icon={searchIcon ? "search" : "cart"}
-                size={24}
-                onPress={() => navigation.navigate(searchIcon ? 'searchBar' : 'cart')}
-            />
+            {
+                navigateTo ?
+                    <Icon
+                        icon={icon}
+                        size={24}
+                        onPress={() => navigation.navigate(navigateTo)}
+                    />
+                    :
+                    <Icon size={24}/>
+            }
         </View>
     )
 }

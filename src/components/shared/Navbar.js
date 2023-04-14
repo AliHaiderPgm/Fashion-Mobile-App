@@ -24,7 +24,7 @@ export default function Navbar() {
             <View style={styles.searchAndCart}>
                 {/* SearchBar */}
                 <Icon
-                    onPress={() => navigation.navigate('searchBar')}
+                    onPress={() => navigation.navigate('search')}
                     icon="search"
                     style={styles.image}
                     size={25}

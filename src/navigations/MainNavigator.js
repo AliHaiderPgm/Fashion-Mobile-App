@@ -20,7 +20,7 @@ export default function index() {
                     options={{ headerShown: false }} />
 
                 <Stack.Screen
-                    name='searchBar'
+                    name='search'
                     component={SearchBar}
                     options={{ headerShown: false }} />
                 <Stack.Screen 
