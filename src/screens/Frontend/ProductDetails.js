@@ -11,16 +11,35 @@ export default function ProductDetails({ navgation, route }) {
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
   const [price, setPrice] = useState(null);
+  const [quantity, setQuantity] = useState(null);
 
   // Function to handle size selection
   const handleSizeSelection = (size) => {
     setSelectedSize(size);
   };
+  // Function to handle color selection
   const handleColorSelection = (color) => {
     setSelectedColor(color);
   };
   const fromChild = (data) => {
-    setPrice(data)
+    setPrice(data.number)
+    setQuantity(data.count)
+  }
+
+  const handleAddTOCart = ()=> {
+    const cartProduct = {
+      details: product,
+      quantity,
+      price,
+    }
+
+    if(selectedSize === null){alert('Please select a size')}
+    else if(selectedColor === null){alert('Please select a color')}
+    else(AddToCart(cartProduct))
+  }
+
+  const AddToCart = (cartProduct)=>{
+    alert('Added to cart')
   }
 
   const sizes = ['S', 'M', 'L', 'XL',]
@@ -78,7 +97,7 @@ export default function ProductDetails({ navgation, route }) {
         </View>
       </ScrollView>
       <View style={styles.buttonWrapper}>
-        <TouchableOpacity activeOpacity={0.5} style={styles.button}>
+        <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={()=> handleAddTOCart()}>
           <Text style={styles.price}>${price}</Text>
           <View style={styles.addToCartWrapper}>
             <Icon icon="cart" size={23} />

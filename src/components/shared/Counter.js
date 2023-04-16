@@ -6,7 +6,7 @@ export default function Counter({sendToParent,productPrice}) {
   const [count,setCount] = useState(1)
   useEffect(()=>{
     const number = count * productPrice
-    sendToParent(number)
+    sendToParent({number,count})
   },[count])
   const handleIncrement = ()=>{
     number = count + 1

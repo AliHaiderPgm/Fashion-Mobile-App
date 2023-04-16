@@ -6,6 +6,7 @@ import SplashScreenProvider from '../components/shared/SplashScreen'
 import TabNavigator from './TabNavigator'
 import Cart from '../screens/Frontend/Cart'
 import ProductDetails from '../screens/Frontend/ProductDetails'
+import Auth from '../screens/Auth'
 
 export default function index() {
     const Stack = createNativeStackNavigator()
@@ -23,14 +24,18 @@ export default function index() {
                     name='search'
                     component={SearchBar}
                     options={{ headerShown: false }} />
-                <Stack.Screen 
-                name='cart'
-                component={Cart}
-                options={{headerShown: false}}/>
-                <Stack.Screen 
-                name='productDetail'
-                component={ProductDetails}
-                options={{headerShown: false}}/>
+                <Stack.Screen
+                    name='cart'
+                    component={Cart}
+                    options={{ headerShown: false }} />
+                <Stack.Screen
+                    name='productDetail'
+                    component={ProductDetails}
+                    options={{ headerShown: false }} />
+                <Stack.Screen
+                    name='auth'
+                    component={Auth}
+                    options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )
