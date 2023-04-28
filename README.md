@@ -1,2 +1,2 @@
 # Fashion-Mobile-App
-React Native Expo mobile app
+React Native Expo fashion mobile app
